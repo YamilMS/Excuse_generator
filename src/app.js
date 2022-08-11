@@ -2,8 +2,8 @@
 import "bootstrap";
 import "./style.css";
 window.onload = function() {
-  document.querySelector("#boton").addEventListener("click", () => {
-    document.querySelector("#Motivo").innerHTML = excusa();
+  document.querySelector("#Excusa").addEventListener("click", () => {
+    document.querySelector("#Excusa").innerHTML = excusa();
   });
 };
 
@@ -23,7 +23,6 @@ let excusa = () => {
   let que = Math.floor(Math.random() * what.length);
   let cuando = Math.floor(Math.random() * when.length);
 
-  return (
-    who[quien] + " " + action[accion] + " " + what[quien] + " " + when[cuando]
-  );
+  return `${who[quien]} ${action[accion]} ${what[quien]} ${when[cuando]}`;
 };
+// who.filter
